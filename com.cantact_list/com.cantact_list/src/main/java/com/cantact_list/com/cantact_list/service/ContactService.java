@@ -76,7 +76,7 @@ public class ContactService {
             Files.copy(image.getInputStream(), fileStorageLocation.resolve(filename), REPLACE_EXISTING);
             return ServletUriComponentsBuilder
                     .fromCurrentContextPath()
-                    .path("/contacts/image/" + filename).toUriString();
+                    .path("api/v1/contacts/image/" + filename).toUriString();
         }catch (Exception exception) {
             throw new RuntimeException("Unable to save image");
         }
